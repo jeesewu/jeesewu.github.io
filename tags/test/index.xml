@@ -4,7 +4,14 @@
         <link>http://jeesewu.github.io/tags/test/</link>
         <description>test - 标签 - Jeese&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jeesewu@gmail.com (Jeese)</managingEditor>
-            <webMaster>jeesewu@gmail.com (Jeese)</webMaster><lastBuildDate>Thu, 25 Mar 2021 01:49:43 &#43;0800</lastBuildDate><atom:link href="http://jeesewu.github.io/tags/test/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>jeesewu@gmail.com (Jeese)</webMaster><lastBuildDate>Thu, 25 Mar 2021 03:19:12 &#43;0800</lastBuildDate><atom:link href="http://jeesewu.github.io/tags/test/" rel="self" type="application/rss+xml" /><item>
+    <title>Markdown 测试</title>
+    <link>http://jeesewu.github.io/markdown-test/</link>
+    <pubDate>Thu, 25 Mar 2021 03:19:12 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://jeesewu.github.io/markdown-test/</guid>
+    <description><![CDATA[Markdown 语法测试。 H2 1 const greet = &#39;Hi&#39;]]></description>
+</item><item>
     <title>我的第一篇文章</title>
     <link>http://jeesewu.github.io/first_post/</link>
     <pubDate>Thu, 25 Mar 2021 01:49:43 &#43;0800</pubDate>

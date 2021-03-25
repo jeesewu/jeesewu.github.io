@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>博客 - 标签 - Jeese&#39;s Blog</title>
+        <link>http://jeesewu.github.io/tags/%E5%8D%9A%E5%AE%A2/</link>
+        <description>博客 - 标签 - Jeese&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jeesewu@gmail.com (Jeese)</managingEditor>
+            <webMaster>jeesewu@gmail.com (Jeese)</webMaster><lastBuildDate>Thu, 25 Mar 2021 15:28:40 &#43;0800</lastBuildDate><atom:link href="http://jeesewu.github.io/tags/%E5%8D%9A%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
+    <title>用 Hugo 建立博客</title>
+    <link>http://jeesewu.github.io/building-blog-with-hugo/</link>
+    <pubDate>Thu, 25 Mar 2021 15:28:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://jeesewu.github.io/building-blog-with-hugo/</guid>
+    <description><![CDATA[1 简介 这篇文章是我使用 Hugo 搭建博客的一个流程记录，这里不会涉及思路、原理之类，仅仅是方便快速回顾。 2 工具选择 Hugo - 建站框架 Github page - 部署静态网站 3 项]]></description>
+</item></channel>
+</rss>

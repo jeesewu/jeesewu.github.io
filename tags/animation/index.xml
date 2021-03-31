@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Animation - 标签 - Jeese&#39;s Blog</title>
+        <link>http://jeesewu.github.io/tags/animation/</link>
+        <description>Animation - 标签 - Jeese&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jeesewu@gmail.com (Jeese)</managingEditor>
+            <webMaster>jeesewu@gmail.com (Jeese)</webMaster><lastBuildDate>Wed, 31 Mar 2021 10:10:15 &#43;0800</lastBuildDate><atom:link href="http://jeesewu.github.io/tags/animation/" rel="self" type="application/rss+xml" /><item>
+    <title>JavaScript 打字效果</title>
+    <link>http://jeesewu.github.io/typewriter-effect-with-javascript/</link>
+    <pubDate>Wed, 31 Mar 2021 10:10:15 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://jeesewu.github.io/typewriter-effect-with-javascript/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/Violet-Evergarden-typewriter.jpg" referrerpolicy="no-referrer">
+            </div>1 打字效果 我要把下面的一段原始文本，用 JavaScript 实现打字机效果的动画。 1 2 3 4 5 6 /* Draw a Spider */ .spider { width: 400px; margin-left: auto; margin-right: auto; } 效果如图： 纯文本的打字效果typewr]]></description>
+</item></channel>
+</rss>

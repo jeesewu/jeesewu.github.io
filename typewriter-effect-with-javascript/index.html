@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>JavaScript 打字效果 - Jeese&#39;s Blog</title><meta name="Description" content="用 JavaScript 实现打字动画效果"><meta property="og:title" content="JavaScript 打字效果" />
+<meta property="og:description" content="用 JavaScript 实现打字动画效果" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://jeesewu.github.io/typewriter-effect-with-javascript/" /><meta property="og:image" content="http://jeesewu.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-03-31T10:10:15&#43;08:00" />
+<meta property="article:modified_time" content="2021-03-31T10:10:15&#43;08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://jeesewu.github.io/logo.png"/>
+
+<meta name="twitter:title" content="JavaScript 打字效果"/>
+<meta name="twitter:description" content="用 JavaScript 实现打字动画效果"/>
+<meta name="application-name" content="Jeese&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Jeese&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://jeesewu.github.io/typewriter-effect-with-javascript/" /><link rel="prev" href="http://jeesewu.github.io/building-blog-with-hugo/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "JavaScript 打字效果",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/jeesewu.github.io\/typewriter-effect-with-javascript\/"
+        },"genre": "posts","keywords": "JavaScript, Animation","wordcount":  1081 ,
+        "url": "http:\/\/jeesewu.github.io\/typewriter-effect-with-javascript\/","datePublished": "2021-03-31T10:10:15+08:00","dateModified": "2021-03-31T10:10:15+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Jeese"
+            },"description": "用 JavaScript 实现打字动画效果"
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Jeese&#39;s Blog">Jeese&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/">📋 文章 </a><a class="menu-item" href="/tags/">🏷 标签 </a><a class="menu-item" href="/categories/">📦 分类 </a><a class="menu-item" href="https://github.com/jeesewu" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i> Github </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Jeese&#39;s Blog">Jeese&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">📋文章</a><a class="menu-item" href="/tags/" title="">🏷标签</a><a class="menu-item" href="/categories/" title="">📦分类</a><a class="menu-item" href="https://github.com/jeesewu" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>Github</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">JavaScript 打字效果</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://jeesewu.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Jeese</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%BF%83%E5%BE%97/"><i class="far fa-folder fa-fw"></i>心得</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-31">2021-03-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1081 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-打字效果">1 打字效果</a></li>
+    <li><a href="#2-文本处理">2 文本处理</a>
+      <ul>
+        <li><a href="#21-纯文本">2.1 纯文本</a></li>
+        <li><a href="#22-语法高亮">2.2 语法高亮</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-打字动画">3 打字动画</a>
+      <ul>
+        <li><a href="#31-纯文本">3.1 纯文本</a></li>
+        <li><a href="#32-语法高亮">3.2 语法高亮</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-改进性能">4 改进性能</a>
+      <ul>
+        <li><a href="#41-insertadjacenthtml-比-innerhtml-更高效">4.1 <code>insertAdjacentHTML</code> 比 <code>innerHTML</code> 更高效</a></li>
+        <li><a href="#42-纯文本的-insert">4.2 纯文本的 insert</a></li>
+        <li><a href="#43-语法高亮的-insert">4.3 语法高亮的 insert</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-总结">5 总结</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="1-打字效果">1 打字效果</h2>
+<p>我要把下面的一段原始文本，用 JavaScript 实现打字机效果的动画。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-css" data-lang="css"><span class="c">/* Draw a Spider */</span>
+<span class="p">.</span><span class="nc">spider</span> <span class="p">{</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">margin-left</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+  <span class="k">margin-right</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>效果如图：</p>
+<p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/typewriter-effect.gif" title="typewriter-effect" data-thumbnail="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/typewriter-effect.gif" data-sub-html="<h2>纯文本的打字效果</h2><p>typewriter-effect</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/typewriter-effect.gif"
+            data-srcset="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/typewriter-effect.gif, https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/typewriter-effect.gif 1.5x, https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/typewriter-effect.gif 2x"
+            data-sizes="auto"
+            alt="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/typewriter-effect.gif" />
+    </a><figcaption class="image-caption">纯文本的打字效果</figcaption>
+    </figure></p>
+<p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/typewriter-effect-with-syntax-highlight.gif" title="typewriter-effect-with-syntax-highlight" data-thumbnail="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/typewriter-effect-with-syntax-highlight.gif" data-sub-html="<h2>语法高亮的文本打字效果</h2><p>typewriter-effect-with-syntax-highlight</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/typewriter-effect-with-syntax-highlight.gif"
+            data-srcset="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/typewriter-effect-with-syntax-highlight.gif, https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/typewriter-effect-with-syntax-highlight.gif 1.5x, https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/typewriter-effect-with-syntax-highlight.gif 2x"
+            data-sizes="auto"
+            alt="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/typewriter-effect-with-syntax-highlight.gif" />
+    </a><figcaption class="image-caption">语法高亮的文本打字效果</figcaption>
+    </figure></p>
+<h2 id="2-文本处理">2 文本处理</h2>
+<h3 id="21-纯文本">2.1 纯文本</h3>
+<p>纯文字，直接放在在 <code>&lt;pre&gt;</code> 里就行。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;</span>
+.spider {
+	width: 400px
+}
+<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="22-语法高亮">2.2 语法高亮</h3>
+<p>语法高亮，基本原理是把原始文本的关键词拆分，放进 <code>&lt;span&gt;</code> 标签内，搭配 CSS 生效样式。</p>
+<p>实现语法高亮的库有 <a href="https://prismjs.com/" target="_blank" rel="noopener noreffer">Prism.js</a>、 <a href="https://highlightjs.org/" target="_blank" rel="noopener noreffer">highlight.js</a> 等，这里我使用 Prism.js。</p>
+<p>生成的 DOM 如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;token selector&#34;</span><span class="p">&gt;</span>.spider<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  &#34; &#34;
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;token punctuation&#34;</span><span class="p">&gt;</span>{<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  &#34; &#34;
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;token property&#34;</span><span class="p">&gt;</span>width<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;token punctuation&#34;</span><span class="p">&gt;</span>:<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  &#34; 400px&#34;
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;token punctuation&#34;</span><span class="p">&gt;</span>}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="3-打字动画">3 打字动画</h2>
+<h3 id="31-纯文本">3.1 纯文本</h3>
+
+
+
+
+
+
+
+<script
+    data-slug-hash="WNRRjXa"
+    data-user="Jeese"
+    data-height="200"
+    data-default-tab="result"
+    data-theme-id="8862"
+    class='codepen'
+    async
+    src="//codepen.io/assets/embed/ei.js"
+></script>
+<p>纯文本只需要每秒更新一次 <code>innerHTML</code> 就行。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">addText</span> <span class="o">=</span> <span class="sb">`/* Draw a Spider */
+</span><span class="sb">.spider {
+</span><span class="sb">  width: 400px;
+</span><span class="sb">  margin-left: auto;
+</span><span class="sb">  margin-right: auto;
+</span><span class="sb">}`</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">time</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">typeWriter</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">addText</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;pre&#34;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="nx">addText</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">typeWriter</span><span class="p">,</span> <span class="nx">time</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="32-语法高亮">3.2 语法高亮</h3>
+
+
+
+
+
+
+
+<script
+    data-slug-hash="jOyyBmL"
+    data-user="Jeese"
+    data-height="200"
+    data-default-tab="result"
+    data-theme-id="8862"
+    class='codepen'
+    async
+    src="//codepen.io/assets/embed/ei.js"
+></script>
+<p>语法高亮也是更新 <code>innerHTML</code>，但是经过 <code>Prism.highlight()</code> 处理。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">addText</span> <span class="o">=</span> <span class="sb">`/* Draw a Spider */
+</span><span class="sb">.spider {
+</span><span class="sb">  width: 400px;
+</span><span class="sb">  margin-left: auto;
+</span><span class="sb">  margin-right: auto;
+</span><span class="sb">}`</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">time</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">currentText</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">typeWriter</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">addText</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">currentText</span> <span class="o">+=</span> <span class="nx">addText</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="kr">const</span> <span class="nx">highlightedText</span> <span class="o">=</span> <span class="nx">Prism</span><span class="p">.</span><span class="nx">highlight</span><span class="p">(</span><span class="nx">currentText</span><span class="p">,</span> <span class="nx">Prism</span><span class="p">.</span><span class="nx">languages</span><span class="p">.</span><span class="nx">css</span><span class="p">);</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&#34;pre&#34;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">highlightedText</span><span class="p">;</span>
+    <span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="nx">typeWriter</span><span class="p">,</span> <span class="nx">time</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>这里不能用 <code>innerHTML += addText.charAt(i)</code>，而是用 <code>currentText</code>，因为 <code>innerHTML</code> 是被语法高亮的 <code>&lt;span&gt;</code> 分割并包裹的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">pre</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;code&#34;</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;token comment&#34;</span><span class="p">&gt;</span>/* Draw a Spider */<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+	...
+<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<h2 id="4-改进性能">4 改进性能</h2>
+<h3 id="41-insertadjacenthtml-比-innerhtml-更高效">4.1 <code>insertAdjacentHTML</code> 比 <code>innerHTML</code> 更高效</h3>
+<p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/element-replace.gif" title="element-replace" data-thumbnail="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/element-replace.gif" data-sub-html="<h2>innerHTML 替换整个 pre 节点</h2><p>element-replace</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/element-replace.gif"
+            data-srcset="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/element-replace.gif, https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/element-replace.gif 1.5x, https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/element-replace.gif 2x"
+            data-sizes="auto"
+            alt="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/element-replace.gif" />
+    </a><figcaption class="image-caption">innerHTML 替换整个 pre 节点</figcaption>
+    </figure></p>
+<p><figure><a class="lightgallery" href="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/element-append.gif" title="element-append" data-thumbnail="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/element-append.gif" data-sub-html="<h2>insertAdjacentHTML 插入节点</h2><p>element-append</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/element-append.gif"
+            data-srcset="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/element-append.gif, https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/element-append.gif 1.5x, https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/element-append.gif 2x"
+            data-sizes="auto"
+            alt="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/element-append.gif" />
+    </a><figcaption class="image-caption">insertAdjacentHTML 插入节点</figcaption>
+    </figure></p>
+<p><code>element.innerHTML</code> 是 <strong><ruby>replace<rt>替换</rt></ruby></strong> 整个节点。</p>
+<p><code>insertAdjacentHTML</code> 是 <strong><ruby>insert<rt>插入</rt></ruby></strong> 到节点。</p>
+<p><strong>替换</strong>是要移除整个节点，再放入新节点；而<strong>插入</strong>是在原来的节点里插入的，性能更佳。</p>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>更多 <strong><ruby>insert<rt>插入</rt></ruby></strong> 的 API<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/prepend" target="_blank" rel="noopener noreffer">ParentNode.prepend()</a></p>
+<p>在父节点的第一个子节点之前插入一系列<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Node" target="_blank" rel="noopener noreffer"><code>Node</code></a>对象或者<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/DOMString" target="_blank" rel="noopener noreffer"><code>DOMString</code></a>对象。</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/ParentNode/append" target="_blank" rel="noopener noreffer">ParentNode.append()</a></p>
+<p>在父节点的最后一个子节点之后插入一组 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Node" target="_blank" rel="noopener noreffer"><code>Node</code></a> 对象或 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/DOMString" target="_blank" rel="noopener noreffer"><code>DOMString</code></a> 对象。</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild" target="_blank" rel="noopener noreffer">Node.appendChild()</a></p>
+<p>将一个节点附加到指定父节点的子节点列表的末尾处。</p>
+</div>
+        </div>
+    </div>
+<h3 id="42-纯文本的-insert">4.2 纯文本的 insert</h3>
+
+
+
+
+
+
+
+<script
+    data-slug-hash="ExZZmdK"
+    data-user="Jeese"
+    data-height="200"
+    data-default-tab="result"
+    data-theme-id="8862"
+    class='codepen'
+    async
+    src="//codepen.io/assets/embed/ei.js"
+></script>
+<p>纯文本很简单，因为没有嵌套结构。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-diff" data-lang="diff"><span class="gd">- document.querySelector(&#34;pre&#34;).innerHTML += addText.charAt(i);
+</span><span class="gd"></span><span class="gi">+ document.querySelector(&#34;pre&#34;).insertAdjacentHTML(&#34;beforeend&#34;, addText.charAt(i));
+</span></code></pre></td></tr></table>
+</div>
+</div><p>DOM 结果如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">pre</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;code&#34;</span><span class="p">&gt;</span>
+  &#34;.&#34;
+  &#34;s&#34;
+  &#34;p&#34;
+  ...
+<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="43-语法高亮的-insert">4.3 语法高亮的 insert</h3>
+
+
+
+
+
+
+
+<script
+    data-slug-hash="JjEEJoJ"
+    data-user="Jeese"
+    data-height="200"
+    data-default-tab="result"
+    data-theme-id="8862"
+    class='codepen'
+    async
+    src="//codepen.io/assets/embed/ei.js"
+></script>
+<p>语法高亮比较麻烦，因为要处理嵌套，找出 <code>text</code> 节点来分割。</p>
+<p>曾经试过用正则表达式来处理，做成一个扁平化的 HTML 文本，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">pre</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;code&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;token comment&#34;</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;token comment&#34;</span><span class="p">&gt;</span>s<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;token comment&#34;</span><span class="p">&gt;</span>p<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>后来发觉 HTML 的嵌套关系太复杂，用正则表达式匹配嵌套的 HTML 似乎是个作死行为😭。</p>
+<div class="details admonition 用正则匹配 HTML 的幻想与现实 open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i><i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>幻想匹配 <code>&lt;span&gt; 套 &lt;span&gt; 套 文本</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>H<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>结果 😭</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>H<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<p>暂时用 <a href="https://github.com/tameemsafi/typewriterjs" target="_blank" rel="noopener noreffer">typewriterjs</a> 吧，有空自己再实现。</p>
+<h2 id="5-总结">5 总结</h2>
+<p>对于 DOM 操作，<strong><ruby>insert<rt>插入</rt></ruby></strong> 往往比 <strong><ruby>replace<rt>替换</rt></ruby></strong> 更高效。</p>
+<p>用正则表达式去解析 HTML，大失败！</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-03-31</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/typewriter-effect-with-javascript/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://jeesewu.github.io/typewriter-effect-with-javascript/" data-title="JavaScript 打字效果" data-hashtags="JavaScript,Animation"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://jeesewu.github.io/typewriter-effect-with-javascript/" data-hashtag="JavaScript"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://jeesewu.github.io/typewriter-effect-with-javascript/" data-title="JavaScript 打字效果" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://jeesewu.github.io/typewriter-effect-with-javascript/" data-title="JavaScript 打字效果"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/javascript/">JavaScript</a>,&nbsp;<a href="/tags/animation/">Animation</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/building-blog-with-hugo/" class="prev" rel="prev" title="用 Hugo 建立博客"><i class="fas fa-angle-left fa-fw"></i>用 Hugo 建立博客</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/jeesewu" target="_blank">Jeese</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"algoliaAppID":"8LS7I64BXP","algoliaIndex":"index_zh-cn","algoliaSearchKey":"eecd73032e6934fdf54726259e37cee7","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

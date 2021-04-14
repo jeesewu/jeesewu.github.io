@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>代码优化 - 标签 - Jeese&#39;s Blog</title>
+        <link>http://jeesewu.github.io/tags/%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/</link>
+        <description>代码优化 - 标签 - Jeese&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jeesewu@gmail.com (Jeese)</managingEditor>
+            <webMaster>jeesewu@gmail.com (Jeese)</webMaster><lastBuildDate>Wed, 14 Apr 2021 15:15:54 &#43;0800</lastBuildDate><atom:link href="http://jeesewu.github.io/tags/%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/" rel="self" type="application/rss+xml" /><item>
+    <title>重构 if-else 或 switch 成 table</title>
+    <link>http://jeesewu.github.io/refactor-ifelse-or-switch-into-table/</link>
+    <pubDate>Wed, 14 Apr 2021 15:15:54 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://jeesewu.github.io/refactor-ifelse-or-switch-into-table/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/ifElse-switch-table.jpg" referrerpolicy="no-referrer">
+            </div>if-else❌ 1 2 3 4 5 6 7 if (season === &#34;summer&#34;) { return &#34;It&#39;s 30, hot!&#34;; } else if (season === &#34;winter&#34;) { return &#34;It&#39;s 2, cold!&#34;; } else { return &#34;It&#39;s 20, good!&#34;; } switch❌ 1 2 3 4 5 switch (season) { case &#34;summer&#34;: return &#34;It&#39;s 30, hot!&#34;; case &#34;winter&#34;: return &#34;It&#39;s 2, cold!&#34;;]]></description>
+</item></channel>
+</rss>

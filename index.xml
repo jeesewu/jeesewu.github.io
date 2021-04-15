@@ -4,9 +4,18 @@
         <link>http://jeesewu.github.io/</link>
         <description>Jeese&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jeesewu@gmail.com (Jeese)</managingEditor>
-            <webMaster>jeesewu@gmail.com (Jeese)</webMaster><lastBuildDate>Wed, 14 Apr 2021 15:15:54 &#43;0800</lastBuildDate>
+            <webMaster>jeesewu@gmail.com (Jeese)</webMaster><lastBuildDate>Thu, 15 Apr 2021 17:31:15 &#43;0800</lastBuildDate>
             <atom:link href="http://jeesewu.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>受控组件和非受控组件</title>
+    <link>http://jeesewu.github.io/controlled-and-uncontrolled-components/</link>
+    <pubDate>Thu, 15 Apr 2021 17:31:15 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://jeesewu.github.io/controlled-and-uncontrolled-components/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/controlled-and-uncontrolled-components.jpg" referrerpolicy="no-referrer">
+            </div>1 Controlled Components 使用 React 时， &lt;input&gt; 的 value 存储在 Component 的 state 里，value 受到 React 的 state 控制，只有 state 改变，渲染出来的 DOM 的 value 才改变。 2 Uncontrolled Elements 指 value 存储在 DOM 里，例如 &lt;input&gt; 的 value 属性里，]]></description>
+</item><item>
     <title>重构 if-else 或 switch 成 table</title>
     <link>http://jeesewu.github.io/refactor-ifelse-or-switch-into-table/</link>
     <pubDate>Wed, 14 Apr 2021 15:15:54 &#43;0800</pubDate>

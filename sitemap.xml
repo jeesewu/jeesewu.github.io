@@ -2,10 +2,13 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://jeesewu.github.io/categories/</loc><lastmod>2021-04-14T15:15:54&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://jeesewu.github.io/</loc><lastmod>2021-04-14T15:15:54&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://jeesewu.github.io/posts/</loc><lastmod>2021-04-14T15:15:54&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://jeesewu.github.io/tags/</loc><lastmod>2021-04-14T15:15:54&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://jeesewu.github.io/categories/</loc><lastmod>2021-04-15T17:31:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://jeesewu.github.io/</loc><lastmod>2021-04-15T17:31:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://jeesewu.github.io/posts/</loc><lastmod>2021-04-15T17:31:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://jeesewu.github.io/tags/react/</loc><lastmod>2021-04-15T17:31:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://jeesewu.github.io/categories/react/</loc><lastmod>2021-04-15T17:31:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://jeesewu.github.io/tags/</loc><lastmod>2021-04-15T17:31:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://jeesewu.github.io/controlled-and-uncontrolled-components/</loc><lastmod>2021-04-15T17:31:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://jeesewu.github.io/tags/%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/</loc><lastmod>2021-04-14T15:15:54&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://jeesewu.github.io/categories/%E4%BB%A3%E7%A0%81%E6%8A%80%E5%B7%A7/</loc><lastmod>2021-04-14T15:15:54&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://jeesewu.github.io/tags/%E9%87%8D%E6%9E%84/</loc><lastmod>2021-04-14T15:15:54&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -17,7 +20,7 @@
             <loc>http://jeesewu.github.io/tags/animation/</loc><lastmod>2021-03-31T10:10:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://jeesewu.github.io/typewriter-effect-with-javascript/</loc><lastmod>2021-03-31T10:10:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>http://jeesewu.github.io/categories/%E5%BF%83%E5%BE%97/</loc><lastmod>2021-03-31T10:10:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://jeesewu.github.io/tags/hugo/</loc><lastmod>2021-03-25T15:28:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://jeesewu.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc><lastmod>2021-03-25T15:28:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://jeesewu.github.io/categories/%E6%B5%81%E7%A8%8B/</loc><lastmod>2021-03-25T15:28:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://jeesewu.github.io/building-blog-with-hugo/</loc><lastmod>2021-03-25T15:28:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url></urlset>
+            <loc>http://jeesewu.github.io/tags/hugo/</loc><lastmod>2021-03-25T15:28:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>http://jeesewu.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc><lastmod>2021-03-25T15:28:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>http://jeesewu.github.io/categories/%E6%B5%81%E7%A8%8B/</loc><lastmod>2021-03-25T15:28:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>http://jeesewu.github.io/building-blog-with-hugo/</loc><lastmod>2021-03-25T15:28:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url></urlset>

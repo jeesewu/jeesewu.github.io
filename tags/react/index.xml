@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>React - 标签 - Jeese&#39;s Blog</title>
+        <link>http://jeesewu.github.io/tags/react/</link>
+        <description>React - 标签 - Jeese&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jeesewu@gmail.com (Jeese)</managingEditor>
+            <webMaster>jeesewu@gmail.com (Jeese)</webMaster><lastBuildDate>Thu, 15 Apr 2021 17:31:15 &#43;0800</lastBuildDate><atom:link href="http://jeesewu.github.io/tags/react/" rel="self" type="application/rss+xml" /><item>
+    <title>受控组件和非受控组件</title>
+    <link>http://jeesewu.github.io/controlled-and-uncontrolled-components/</link>
+    <pubDate>Thu, 15 Apr 2021 17:31:15 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://jeesewu.github.io/controlled-and-uncontrolled-components/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/controlled-and-uncontrolled-components.jpg" referrerpolicy="no-referrer">
+            </div>1 Controlled Components 使用 React 时， &lt;input&gt; 的 value 存储在 Component 的 state 里，value 受到 React 的 state 控制，只有 state 改变，渲染出来的 DOM 的 value 才改变。 2 Uncontrolled Elements 指 value 存储在 DOM 里，例如 &lt;input&gt; 的 value 属性里，]]></description>
+</item></channel>
+</rss>

@@ -10,6 +10,8 @@
     <pubDate>Fri, 16 Apr 2021 18:08:50 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://jeesewu.github.io/this-in-react/</guid>
-    <description><![CDATA[0 简介 这里写的 React 中的 this 问题，其实不是 React 特有，而是 JavaScript 的，我这里仅介绍 React 中常见的情况。 this 简而言之就是：Function call this 更详细的前因后果，我可]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/this-in-React.jpg" referrerpolicy="no-referrer">
+            </div>0 简介 这里写的 React 中的 this 问题，其实不是 React 特有，而是 JavaScript 的，我这里仅介绍 React 中常见的情况。 this 简而言之就是：Function call this 更详细的前因后果，我可]]></description>
 </item></channel>
 </rss>

@@ -2,14 +2,17 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://jeesewu.github.io/categories/</loc><lastmod>2021-04-16T18:08:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://jeesewu.github.io/categories/browser/</loc><lastmod>2021-04-18T22:27:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://jeesewu.github.io/categories/</loc><lastmod>2021-04-18T22:27:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://jeesewu.github.io/input-viewport-zoom-on-iphone/</loc><lastmod>2021-04-18T22:27:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://jeesewu.github.io/</loc><lastmod>2021-04-18T22:27:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://jeesewu.github.io/posts/</loc><lastmod>2021-04-18T22:27:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://jeesewu.github.io/tags/safari/</loc><lastmod>2021-04-18T22:27:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://jeesewu.github.io/tags/</loc><lastmod>2021-04-18T22:27:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://jeesewu.github.io/tags/javascript/</loc><lastmod>2021-04-16T18:08:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://jeesewu.github.io/categories/javascript/</loc><lastmod>2021-04-16T18:08:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://jeesewu.github.io/</loc><lastmod>2021-04-16T18:08:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://jeesewu.github.io/posts/</loc><lastmod>2021-04-16T18:08:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://jeesewu.github.io/tags/react/</loc><lastmod>2021-04-16T18:08:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://jeesewu.github.io/this-in-react/</loc><lastmod>2021-04-16T18:08:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://jeesewu.github.io/tags/</loc><lastmod>2021-04-16T18:08:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://jeesewu.github.io/tags/this/</loc><lastmod>2021-04-16T18:08:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://jeesewu.github.io/categories/react/</loc><lastmod>2021-04-15T17:31:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>http://jeesewu.github.io/controlled-and-uncontrolled-components/</loc><lastmod>2021-04-15T17:31:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>

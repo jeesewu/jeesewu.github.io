@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Browser - 分类 - Jeese&#39;s Blog</title>
+        <link>http://jeesewu.github.io/categories/browser/</link>
+        <description>Browser - 分类 - Jeese&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>jeesewu@gmail.com (Jeese)</managingEditor>
+            <webMaster>jeesewu@gmail.com (Jeese)</webMaster><lastBuildDate>Sun, 18 Apr 2021 22:27:42 &#43;0800</lastBuildDate><atom:link href="http://jeesewu.github.io/categories/browser/" rel="self" type="application/rss+xml" /><item>
+    <title>iPhone 的 &lt;Input&gt; 视口缩放现象</title>
+    <link>http://jeesewu.github.io/input-viewport-zoom-on-iphone/</link>
+    <pubDate>Sun, 18 Apr 2021 22:27:42 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://jeesewu.github.io/input-viewport-zoom-on-iphone/</guid>
+    <description><![CDATA[1 先来看看缩放现象 iPhone 上的浏览器 Safari\Chrome\Firefox，会出现如下现象： 当聚焦的元素的字体大小 &gt;= 16px 时，Viewport 不缩]]></description>
+</item></channel>
+</rss>

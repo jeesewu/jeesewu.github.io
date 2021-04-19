@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>iPhone 的 &lt;Input&gt; 视口缩放现象 - Jeese&#39;s Blog</title><meta name="Description" content="iPhone 的 &lt;Input&gt; Viewport 缩放现象"><meta property="og:title" content="iPhone 的 &lt;Input&gt; 视口缩放现象" />
-<meta property="og:description" content="iPhone 的 &lt;Input&gt; Viewport 缩放现象" />
+        <title>iPhone 的 Input 视口缩放现象 - Jeese&#39;s Blog</title><meta name="Description" content="iPhone 的 Input 元素 Viewport 缩放现象"><meta property="og:title" content="iPhone 的 Input 视口缩放现象" />
+<meta property="og:description" content="iPhone 的 Input 元素 Viewport 缩放现象" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://jeesewu.github.io/input-viewport-zoom-on-iphone/" /><meta property="og:image" content="http://jeesewu.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-04-18T22:27:42&#43;08:00" />
@@ -15,8 +15,8 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://jeesewu.github.io/logo.png"/>
 
-<meta name="twitter:title" content="iPhone 的 &lt;Input&gt; 视口缩放现象"/>
-<meta name="twitter:description" content="iPhone 的 &lt;Input&gt; Viewport 缩放现象"/>
+<meta name="twitter:title" content="iPhone 的 Input 视口缩放现象"/>
+<meta name="twitter:description" content="iPhone 的 Input 元素 Viewport 缩放现象"/>
 <meta name="application-name" content="Jeese&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="Jeese&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -24,18 +24,18 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "iPhone 的 \u003cInput\u003e 视口缩放现象",
+        "headline": "iPhone 的 Input 视口缩放现象",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/jeesewu.github.io\/input-viewport-zoom-on-iphone\/"
-        },"genre": "posts","keywords": "Safari","wordcount":  449 ,
+        },"genre": "posts","keywords": "Safari","wordcount":  480 ,
         "url": "http:\/\/jeesewu.github.io\/input-viewport-zoom-on-iphone\/","datePublished": "2021-04-18T22:27:42+08:00","dateModified": "2021-04-18T22:27:42+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
                 "name": "Jeese"
-            },"description": "iPhone 的 \u003cInput\u003e Viewport 缩放现象"
+            },"description": "iPhone 的 Input 元素 Viewport 缩放现象"
     }
     </script></head>
     <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
@@ -104,9 +104,9 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">iPhone 的 &lt;Input&gt; 视口缩放现象</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">iPhone 的 Input 视口缩放现象</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://jeesewu.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Jeese</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/browser/"><i class="far fa-folder fa-fw"></i>Browser</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-18">2021-04-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 449 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-04-18">2021-04-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 480 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -189,14 +189,22 @@
 </div><p>修改</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&#34;text&#34;</span><span class="o">]</span> <span class="p">{</span>
@@ -206,6 +214,14 @@
     <span class="k">line-height</span><span class="p">:</span> <span class="mf">26.666666667</span><span class="kt">px</span><span class="p">;</span>
     <span class="k">padding</span><span class="p">:</span> <span class="mf">6.666666667</span><span class="kt">px</span><span class="p">;</span>
     <span class="k">width</span><span class="p">:</span> <span class="mf">133.333333333</span><span class="kt">%</span><span class="p">;</span>
+   
+    <span class="c">/* scale down by 12/16 = 75% */</span>
+    <span class="k">transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mf">0.75</span><span class="p">);</span>
+    <span class="k">transform-origin</span><span class="p">:</span> <span class="kc">left</span> <span class="kc">top</span><span class="p">;</span>
+   
+    <span class="c">/* remove extra white space */</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">-10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-right</span><span class="p">:</span> <span class="mf">-33.333333333</span><span class="kt">%</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
@@ -227,7 +243,7 @@
                             <a class="link-to-markdown" href="/input-viewport-zoom-on-iphone/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://jeesewu.github.io/input-viewport-zoom-on-iphone/" data-title="iPhone 的 &lt;Input&gt; 视口缩放现象" data-hashtags="Safari"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://jeesewu.github.io/input-viewport-zoom-on-iphone/" data-hashtag="Safari"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://jeesewu.github.io/input-viewport-zoom-on-iphone/" data-title="iPhone 的 &lt;Input&gt; 视口缩放现象" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://jeesewu.github.io/input-viewport-zoom-on-iphone/" data-title="iPhone 的 &lt;Input&gt; 视口缩放现象"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://jeesewu.github.io/input-viewport-zoom-on-iphone/" data-title="iPhone 的 Input 视口缩放现象" data-hashtags="Safari"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://jeesewu.github.io/input-viewport-zoom-on-iphone/" data-hashtag="Safari"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://jeesewu.github.io/input-viewport-zoom-on-iphone/" data-title="iPhone 的 Input 视口缩放现象" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://jeesewu.github.io/input-viewport-zoom-on-iphone/" data-title="iPhone 的 Input 视口缩放现象"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a></span>
             </div>
         </div>
     </div>

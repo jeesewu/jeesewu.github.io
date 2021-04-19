@@ -1,4 +1,4 @@
-# iPhone 的 <Input> 视口缩放现象
+# iPhone 的 Input 视口缩放现象
 
 
 ## 1 先来看看缩放现象
@@ -55,6 +55,14 @@ iPhone 上的浏览器  Safari\Chrome\Firefox，会出现如下现象：
        line-height: 26.666666667px;
        padding: 6.666666667px;
        width: 133.333333333%;
+   
+       /* scale down by 12/16 = 75% */
+       transform: scale(0.75);
+       transform-origin: left top;
+   
+       /* remove extra white space */
+       margin-bottom: -10px;
+       margin-right: -33.333333333%;
    }
    ```
 

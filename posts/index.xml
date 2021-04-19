@@ -10,7 +10,9 @@
     <pubDate>Sun, 18 Apr 2021 22:27:42 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://jeesewu.github.io/input-viewport-zoom-on-iphone/</guid>
-    <description><![CDATA[1 先来看看缩放现象 iPhone 上的浏览器 Safari\Chrome\Firefox，会出现如下现象： 当聚焦的元素的字体大小 &gt;= 16px 时，Viewport 不缩]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/input-zoom-on-iphone.jpeg" referrerpolicy="no-referrer">
+            </div>1 先来看看缩放现象 iPhone Input 缩放input-viewport-zoom-on-iPhone " iPhone Input 缩放 iPhone 上的浏览器 Safari\Chrome\Fir]]></description>
 </item><item>
     <title>React 中的 &#34;this&#34;</title>
     <link>http://jeesewu.github.io/this-in-react/</link>

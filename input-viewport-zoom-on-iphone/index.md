@@ -3,6 +3,8 @@
 
 ## 1 先来看看缩放现象
 
+![input-viewport-zoom-on-iPhone](https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/input-viewport-zoom-on-iPhone.gif "iPhone Input 缩放")
+
 {{< codepen id="eYgLOLj" height=300 >}}
 
 iPhone 上的浏览器  Safari\Chrome\Firefox，会出现如下现象：

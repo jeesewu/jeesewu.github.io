@@ -1,19 +1,19 @@
 # 受控组件和非受控组件
 
 
-## 1 Controlled Components
+## 1 受控组件
 
 使用 React 时， `<input>` 的 value 存储在 Component 的 state 里，value 受到 React 的 state 控制，只有 state 改变，渲染出来的 DOM 的 value 才改变。
 
-## 2 Uncontrolled Elements
+## 2 非受控元素
 
 指 value 存储在 DOM 里，例如 `<input>` 的 value 属性里，没有受到 React 的 state 控制。
 
-## 3 Uncontrolled Components
+## 3 非受控组件
 
 针对 Uncontrolled Elements，React 使用 **`ref`** 对其进行引用，value 依旧是存储在 DOM 里，引用可以看似 `document.querySelector()` 这样的 DOM 操作。
 
-## 4 Codepen Example
+## 4 Codepen 示例
 
 {{< codepen id="PoWegMz" height=500 >}}
 

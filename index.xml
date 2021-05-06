@@ -32,7 +32,7 @@
     <guid>http://jeesewu.github.io/controlled-and-uncontrolled-components/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://raw.githubusercontent.com/jeesewu/my-resource-library/main/uPic/controlled-and-uncontrolled-components.jpg" referrerpolicy="no-referrer">
-            </div>1 Controlled Components 使用 React 时， &lt;input&gt; 的 value 存储在 Component 的 state 里，value 受到 React 的 state 控制，只有 state 改变，渲染出来的 DOM 的 value 才改变。 2 Uncontrolled Elements 指 value 存储在 DOM 里，例如 &lt;input&gt; 的 value 属性里，]]></description>
+            </div>1 受控组件 使用 React 时， &lt;input&gt; 的 value 存储在 Component 的 state 里，value 受到 React 的 state 控制，只有 state 改变，渲染出来的 DOM 的 value 才改变。 2 非受控元素 指 value 存储在 DOM 里，例如 &lt;input&gt; 的]]></description>
 </item><item>
     <title>重构 if-else 或 switch 成 table</title>
     <link>http://jeesewu.github.io/refactor-ifelse-or-switch-into-table/</link>
